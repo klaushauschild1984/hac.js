@@ -46,6 +46,13 @@ UPDATE Product; code[unique = true, allownull = true, default = code];
 
 ```
 
+## Formatting rule
+
+* trim all lines and values
+* remove trailing empty lines
+* remove trailing `;`
+* remove multiple empty lines (keeps blocks intact)
+
 ### Binary packages
 
 Build binary packages directly executable with
