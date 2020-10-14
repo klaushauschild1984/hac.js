@@ -15,31 +15,36 @@ format(impex_file_name);
 ```
 
 Turning this
+```
+    $macro     =value
 
-<pre id="this"></pre>
+# other comment
+INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
+#    fdfs
+    ;   code
+
+    REMOVE Product;code[unique=true]
+;super very long value that is longer than its header
+
+UPDATE Product; code [unique  =true ]  [allownull=true    ,default=code]
+
+```
 
 in that
+```
+$macro = value
 
-<pre id="that"></pre>
+# other comment
+INSERT_UPDATE Product; code[unique = true]; 
+# fdfs
+                     ; code               ; 
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script>
-    axios({
-        method: 'get',
-        url: 'https://raw.githubusercontent.com/klaushauschild1984/impex.js/main/malformatted.impex'
-    })
-    .then(function (response) {
-        document.getElementById("this").innerHTML = response.data;
-    });
-      
-    axios({
-        method: 'get',
-        url: 'https://raw.githubusercontent.com/klaushauschild1984/impex.js/main/malformatted.formatted.impex'
-    })
-    .then(function (response) {
-        document.getElementById("that").innerHTML = response.data;
-    });
-</script>
+REMOVE Product; code[unique = true]                                  ; 
+              ; super very long value that is longer than its header ; 
+
+UPDATE Product; code[unique = true, allownull = true, default = code]; 
+
+```
 
 ### Binary packages
 
