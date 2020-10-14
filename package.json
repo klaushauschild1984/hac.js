@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "package-linux": "pkg format-cli.js -o bin/format-impex -t linux",
-        "package-windows": "pkg format-cli.js -o bin/format-impex -t windows"
+        "package-linux": "nexe format-cli.js -o bin/format-impex -t linux --build",
+        "package-windows": "nexe format-cli.js -o bin/format-impex -t windows"
     },
     "keywords": [
         "impex",
@@ -19,6 +19,6 @@
         "line-reader-sync": "^0.1.0"
     },
     "devDependencies": {
-        "pkg": "^4.4.9"
+        "nexe": "^3.3.7"
     }
 }
