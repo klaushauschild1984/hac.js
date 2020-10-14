@@ -1,0 +1,11 @@
+    $macro     =value
+
+# other comment
+INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
+#    fdfs
+    ;   code
+
+    REMOVE Product;code[unique=true]
+;super very long value that is longer than its header
+
+UPDATE Product; code [unique  =true ]  [allownull=true    ,default=code]
