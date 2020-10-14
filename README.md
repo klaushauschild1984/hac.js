@@ -61,3 +61,8 @@ Build binary packages directly executable with
 * `npm run package-linux`
 
 This will produce the respective binaries in `bin` folder.
+
+Or download from release page
+
+* [Windows](https://github.com/klaushauschild1984/impex.js/releases/download/v1.0.0/format-impex.exe)
+* [Linux](https://github.com/klaushauschild1984/impex.js/releases/download/v1.0.0/format-impex)
