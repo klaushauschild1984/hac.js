@@ -19,6 +19,8 @@
         "line-reader-sync": "^0.1.0"
     },
     "devDependencies": {
-        "nexe": "^3.3.7"
+        "grunt": "~1.3.0",
+        "grunt-contrib-jshint": "~2.1.0",
+        "jshint-stylish": "~2.2.1"
     }
 }

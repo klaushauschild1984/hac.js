@@ -51,7 +51,7 @@ const process_chunks = (chunks) => {
         }
 
         return values.join(';');
-    }
+    };
 
     for (let chunk of chunks) {
         for (let i = 0; i < chunk.lines.length; i++) {
@@ -107,14 +107,14 @@ const process_chunks = (chunks) => {
             chunk.lines[i] = line;
         }
     }
-}
+};
 
 const write_file = (chunks, impex) => {
     const append = (line) => {
         fs.writeFileSync(impex, `${line}${os.EOL}`, {
             flag: 'a+'
         });
-    }
+    };
 
     for (let i = 0; i < chunks.length; i++) {
         const chunk = chunks[i];
@@ -126,7 +126,7 @@ const write_file = (chunks, impex) => {
             append('');
         }
     }
-}
+};
 
 const create_formatted_file = (impex) => {
     const name = path.parse(impex).name;
@@ -134,7 +134,7 @@ const create_formatted_file = (impex) => {
     let formatted_impex = `${name}.formatted${ext}`;
     fs.writeFileSync(formatted_impex, '');
     return formatted_impex;
-}
+};
 
 const read_chunks = (impex) => {
     const new_chunk = (chs) => {
@@ -145,7 +145,7 @@ const read_chunks = (impex) => {
         };
         chs.push(ch);
         return ch;
-    }
+    };
 
     const lines = new line_reader(impex).toLines();
 
@@ -177,4 +177,4 @@ const read_chunks = (impex) => {
     }
 
     return chunks;
-}
+};

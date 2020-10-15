@@ -1,7 +1,7 @@
 const pkg = require('./package.json');
 const format = require('./format');
 
-console.log(`${pkg.name} ${pkg.version}`)
+console.log(`${pkg.name} ${pkg.version}`);
 
 const impex = process.argv.slice(2)[0];
 if (impex === undefined) {
