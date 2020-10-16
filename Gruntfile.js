@@ -4,10 +4,20 @@ const path = require('path');
 module.exports = function (grunt) {
 
     // load tasks
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-antlr4');
 
     // initialize configuration
     grunt.initConfig({
+        clean: {
+            impex: [
+                'lib/impex/Impex.tokens',
+                'lib/impex/ImpexLexer.js',
+                'lib/impex/ImpexLexer.tokens',
+                'lib/impex/ImpexParser.js',
+            ]
+        },
         jshint: {
             all: ['*.js'],
             options: {
@@ -15,13 +25,26 @@ module.exports = function (grunt) {
                 force: true
             }
         },
+        antlr4: {
+            impex: {
+                grammar: 'lib/impex/Impex.g4',
+                options: {
+                    grammarLevel: {
+                        language: 'JavaScript'
+                    },
+                    flags: [
+                        'no-listener'
+                    ]
+                },
+            },
+        },
     });
 
     // default task
-    grunt.registerTask('default', ['jshint', 'package']);
+    grunt.registerTask('default', ['clean:impex', 'antlr4:impex', 'jshint', 'package']);
 
     // build platform package task
-    grunt.registerTask('buildPlatformPackage', function(platform) {
+    grunt.registerTask('buildPlatformPackage', function (platform) {
         if (!platform) {
             throw new Error('No platform provided');
         }
@@ -39,7 +62,7 @@ module.exports = function (grunt) {
     });
 
     // package task -> windows + linux
-    grunt.registerTask('package', function() {
+    grunt.registerTask('package', function () {
         grunt.task.run('buildPlatformPackage:linux-x64-12.0.0', 'buildPlatformPackage:windows');
     });
 };
