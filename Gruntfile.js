@@ -17,9 +17,10 @@ module.exports = function (grunt) {
         },
     });
 
-    // register tasks
-    grunt.registerTask('default', ['jshint']);
+    // default task
+    grunt.registerTask('default', ['jshint', 'package']);
 
+    // build platform package task
     grunt.registerTask('buildPlatformPackage', function(platform) {
         if (!platform) {
             throw new Error('No platform provided');
@@ -37,6 +38,7 @@ module.exports = function (grunt) {
         });
     });
 
+    // package task -> windows + linux
     grunt.registerTask('package', function() {
         grunt.task.run('buildPlatformPackage:linux-x64-12.0.0', 'buildPlatformPackage:windows');
     });
