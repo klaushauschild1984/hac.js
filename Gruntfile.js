@@ -12,6 +12,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         clean: {
             impex: [
+                'bin',
+
                 'lib/impex/Impex.tokens',
                 'lib/impex/ImpexLexer.js',
                 'lib/impex/ImpexLexer.tokens',
@@ -63,6 +65,6 @@ module.exports = function (grunt) {
 
     // package task -> windows + linux
     grunt.registerTask('package', function () {
-        grunt.task.run('buildPlatformPackage:linux-x64-12.0.0', 'buildPlatformPackage:windows');
+        grunt.task.run('buildPlatformPackage:linux-x64-12.0.0', 'buildPlatformPackage:windows-x64-12.16.3');
     });
 };
