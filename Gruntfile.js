@@ -6,20 +6,12 @@ module.exports = function (grunt) {
     // load tasks
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-antlr4');
 
     // initialize configuration
     grunt.initConfig({
-        clean: {
-            impex: [
-                'bin',
-
-                'lib/impex/Impex.tokens',
-                'lib/impex/ImpexLexer.js',
-                'lib/impex/ImpexLexer.tokens',
-                'lib/impex/ImpexParser.js',
-            ]
-        },
+        clean: [
+            'bin',
+        ],
         jshint: {
             all: ['*.js'],
             options: {
@@ -43,7 +35,7 @@ module.exports = function (grunt) {
     });
 
     // default task
-    grunt.registerTask('default', ['clean:impex', 'antlr4:impex', 'jshint', 'package']);
+    grunt.registerTask('default', ['clean', 'jshint', 'package']);
 
     // build platform package task
     grunt.registerTask('buildPlatformPackage', function (platform) {

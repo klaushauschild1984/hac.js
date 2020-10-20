@@ -13,7 +13,7 @@ REMOVE Product; code[unique = true]
 # modifiers
 UPDATE Product; code [unique = true]  [allownull = true, default = code]
 
-# multi-line vlaues
+# multi-line values
 INSERT_UPDATE Product; code ; description[lang = en]
                      ; code ; "
 description

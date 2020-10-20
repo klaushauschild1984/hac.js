@@ -1,4 +1,4 @@
-# macro
+#         macro
     $macro     =value
 
 # different column count
@@ -11,10 +11,11 @@ INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
 ;super very long value that is longer than its header
 
 # modifiers
-UPDATE Product; code [unique  =true ]  [allownull=true    ,default=code]
+update Product; code [unique  =true ]  [allownull=true    ,default=code]
 
-# multi-line vlaues
-INSERT_UPDATE Product; code; description[lang=en]
+# multi-line values
+iNsErT Product; code; description[lang=en]
 ;code;"description
 that can go over
-multiple lines"
+multiple lines
+with ""wrapped values""";
