@@ -14,7 +14,7 @@ INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
 update Product; code [unique  =true ]  [allownull=true    ,default=code]
 
 # multi-line values
-iNsErT Product; code; description[lang=en];approvalStatus(code)
+iNsErT_uPdAtE Product; code; description[lang=en];approvalStatus(code)
 ;code;"description
 that can go over
 multiple lines
