@@ -2,6 +2,7 @@
     "name": "impex.js",
     "version": "1.0.1",
     "description": "",
+    "main": "lib.js",
     "scripts": {
         "package": "grunt",
         "test": "mocha test/**/*.js"
@@ -25,14 +26,15 @@
     ],
     "license": "MIT",
     "dependencies": {
+        "mocha": "^8.1.3"
     },
     "devDependencies": {
-        "grunt": "~1.3.0",
+        "grunt": "^1.3.0",
         "grunt-cli": "^1.3.2",
         "grunt-contrib-clean": "^2.0.0",
-        "grunt-contrib-jshint": "~2.1.0",
-        "jshint-stylish": "~2.2.1",
-        "nexe": "^3.3.7",
-        "mocha": "^8.1.3"
+        "grunt-contrib-jshint": "^2.1.0",
+        "grunt-mocha-test": "^0.13.3",
+        "mocha-cli": "^1.0.1",
+        "nexe": "^3.3.7"
     }
 }

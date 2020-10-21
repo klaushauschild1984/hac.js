@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     // load tasks
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-mocha-test');
 
     // initialize configuration
     grunt.initConfig({
@@ -19,23 +20,18 @@ module.exports = function (grunt) {
                 force: true
             }
         },
-        antlr4: {
-            impex: {
-                grammar: 'lib/impex/Impex.g4',
+        mochaTest: {
+            test: {
                 options: {
-                    grammarLevel: {
-                        language: 'JavaScript'
-                    },
-                    flags: [
-                        'no-listener'
-                    ]
+                    reporter: 'spec',
                 },
-            },
-        },
+                src: ['test/**/*.js']
+            }
+        }
     });
 
     // default task
-    grunt.registerTask('default', ['clean', 'jshint', 'package']);
+    grunt.registerTask('default', ['clean', 'jshint', 'mochaTest', 'package']);
 
     // build platform package task
     grunt.registerTask('buildPlatformPackage', function (platform) {
