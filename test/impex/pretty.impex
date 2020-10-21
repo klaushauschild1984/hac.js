@@ -2,21 +2,22 @@
 $macro = value
 
 # different column count
-INSERT_UPDATE     Product; code[unique = true];;;;
-#    fdfs
-                         ; code
+INSERT_UPDATE Product; code[unique = true]
+# fdfs
+                     ; code
 
 # long value
 REMOVE Product; code[unique = true]
               ; super very long value that is longer than its header
 
 # modifiers
-UPDATE Product; code [unique = true]  [allownull = true, default = code]
+UPDATE Product; code[unique = true, allownull = true, default = code]
 
 # multi-line values
-INSERT_UPDATE Product; code ; description[lang = en]
+INSERT_UPDATE Product; code ; description[lang = en] ; approvalStatus(code)
                      ; code ; "
 description
 that can go over
 multiple lines
-"
+with ""wrapped values""
+"                                                    ; APPROVED

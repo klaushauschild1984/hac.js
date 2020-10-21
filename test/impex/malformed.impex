@@ -8,14 +8,14 @@ INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
 
 # long value
     REMOVE Product;code[unique=true]
-;super very long value that is longer than its header
+;super very long value that is longer than its header   ;;; ;;;
 
 # modifiers
 update Product; code [unique  =true ]  [allownull=true    ,default=code]
 
 # multi-line values
-iNsErT Product; code; description[lang=en]
+iNsErT Product; code; description[lang=en];approvalStatus(code)
 ;code;"description
 that can go over
 multiple lines
-with ""wrapped values""";
+with ""wrapped values"""; APPROVED
