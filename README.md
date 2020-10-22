@@ -1,11 +1,17 @@
-# impex.js
-Node.js module dealing with Impex files typically used data transport file in SAP Hybris Commerce Suite
+# hac.js [![Build Status](https://travis-ci.com/klaushauschild1984/hac.js.svg?branch=main)](https://travis-ci.com/klaushauschild1984/hac.js)
+Node.js module dealing SAP Hybris Commerce Suite administration console.
 
-## Impex pretty printer
+## Impex
+
+### Parser
+
+TODO
+
+### Pretty printer
 
 `format.js` exports a function for pretty print an Impex file as `[ORIGN].formatted.impex`. `format-cli.js` house a command line adapter for it.
 
-## Usage
+#### Usage
 ```
 const format = require('./format');
 
@@ -46,14 +52,14 @@ UPDATE Product; code[unique = true, allownull = true, default = code];
 
 ```
 
-## Formatting rule
+#### Formatting rule
 
 * trim all lines and values
 * remove trailing empty lines
 * remove trailing `;`
 * remove multiple empty lines (keeps blocks intact)
 
-### Binary packages
+#### Binary packages
 
 Build binary packages directly executable with
 
@@ -67,6 +73,6 @@ Or download from release page
 * [Windows](https://github.com/klaushauschild1984/impex.js/releases/download/v1.0.0/format-impex.exe)
 * [Linux](https://github.com/klaushauschild1984/impex.js/releases/download/v1.0.0/format-impex)
 
-### Requirements
+## Requirements
 * Node.js 12+
 * For building binaries: Node.js version should be supported by `nexe`, see https://github.com/nexe/nexe/releases
