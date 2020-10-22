@@ -4,7 +4,8 @@
     "description": "",
     "main": "lib.js",
     "scripts": {
-        "package": "grunt"
+        "package": "grunt",
+        "test": "grunt mochaTest"
     },
     "keywords": [
         "hac",
