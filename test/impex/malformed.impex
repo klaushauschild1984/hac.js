@@ -7,11 +7,12 @@ INSERT_UPDATE     Product   ;code[unique=true]     ;;; ;
     ;   code
 
 # long value
-    REMOVE Product;code[unique=true]
+    REMOVE Product;code[unique=true];name[lang=en]
 ;super very long value that is longer than its header   ;;; ;;;
 
 # modifiers
 update Product; code [unique  =true ]  [allownull=true    ,default=code]
+;foo;bar
 
 # multi-line values
 iNsErT_uPdAtE Product; code; description[lang=en];approvalStatus(code)

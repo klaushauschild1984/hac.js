@@ -73,6 +73,6 @@ describe('parser', () => {
     it('sample impex', () => {
         const impex = fs.readFileSync('test/impex/pretty.impex').toString();
         const tokens = parser(impex);
-        assert.strictEqual(tokens.length, 18);
+        assert.strictEqual(tokens.length, 19);
     });
 });
