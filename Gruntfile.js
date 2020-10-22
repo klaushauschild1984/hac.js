@@ -14,10 +14,15 @@ module.exports = function (grunt) {
             'bin',
         ],
         jshint: {
-            all: ['*.js'],
+            all: [
+                '*.js',
+                'lib/**/*.js',
+                'test/**/*.js',
+            ],
             options: {
                 esversion: 6,
-                force: true
+                force: true,
+                reporter: require('jshint-stylish')
             }
         },
         mochaTest: {

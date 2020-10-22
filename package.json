@@ -4,8 +4,7 @@
     "description": "",
     "main": "lib.js",
     "scripts": {
-        "package": "grunt",
-        "test": "mocha test/**/*.js"
+        "package": "grunt"
     },
     "keywords": [
         "hac",
@@ -33,8 +32,8 @@
         "grunt-cli": "^1.3.2",
         "grunt-contrib-clean": "^2.0.0",
         "grunt-contrib-jshint": "^2.1.0",
+        "jshint-stylish": "^2.2.1",
         "grunt-mocha-test": "^0.13.3",
-        "mocha-cli": "^1.0.1",
         "nexe": "^3.3.7"
     }
 }
